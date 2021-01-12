@@ -69,7 +69,7 @@ function setup() {
   ball = Bodies.circle(50,200,20);
   World.add(world,ball);
 
-  slingShot = new SlingShot(ball.body,{x:200,y:200});
+  slingShot = new SlingShot(this.ball,{x:200,y:200});
 
 }
 
@@ -142,7 +142,7 @@ function draw() {
 }
 
 function mouseDragged(){
-  Matter.Body.setPosition(ball.body,{x:mouseX,y:mouseY});
+  Matter.Body.setPosition(this.ball,{x:mouseX,y:mouseY});
 }
 
 function mouseReleased(){
